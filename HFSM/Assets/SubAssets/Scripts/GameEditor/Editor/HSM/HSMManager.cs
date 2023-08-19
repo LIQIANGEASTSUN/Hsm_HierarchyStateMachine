@@ -5,7 +5,7 @@ using HSMTree;
 public class HSMManager
 {
     private HSMDrawProperty _HSMDrawPropertyController;
-    private HsmNodeDrawController _nodeDrawController;
+    private HsmNodeAreaDrawController _nodeAreaDrawController;
 
     public HSMManager()
     {
@@ -17,14 +17,14 @@ public class HSMManager
         HsmDataController.Instance = new HsmDataController();
         HsmDataController.Instance.Init();
         _HSMDrawPropertyController = new HSMDrawProperty();
-        _nodeDrawController = new HsmNodeDrawController();
+        _nodeAreaDrawController = new HsmNodeAreaDrawController();
         HSMRunTime.Instance.Init();
     }
 
     public void OnDestroy()
     {
         HsmDataController.Instance.Destroy();
-        _nodeDrawController.OnDestroy();
+        _nodeAreaDrawController.OnDestroy();
         _HSMDrawPropertyController.OnDestroy();
         HSMRunTime.Instance.OnDestroy();
 
@@ -49,7 +49,7 @@ public class HSMManager
 
             EditorGUILayout.BeginVertical("box", GUILayout.ExpandWidth(true), GUILayout.ExpandHeight(true));
             {
-                _nodeDrawController.OnGUI(windowRect);
+                _nodeAreaDrawController.OnGUI(windowRect);
             }
             EditorGUILayout.EndVertical();
         }

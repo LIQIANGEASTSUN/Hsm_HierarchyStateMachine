@@ -1,6 +1,4 @@
 ﻿using GraphicTree;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -8,7 +6,6 @@ namespace HSMTree
 {
     public class DrawNodeCurveTools
     {
-
         // 绘制线
         public static void DrawNodeCurve(RectT start, RectT end, Color color)
         {
@@ -54,6 +51,5 @@ namespace HSMTree
             startCenter = new Vector3(start.x + start.width * coefficient, start.y + start.height * coefficient);
             endCenter = new Vector3(end.x + end.width * coefficient, end.y + end.height * coefficient);
         }
-
     }
 }

@@ -4,10 +4,9 @@ using UnityEditor;
 
 namespace HSMTree
 {
-    public class HsmNodeDrawView
+    public class HsmNodeAreaDrawView
     {
-        private HsmNodeDrawController _drawController = null;
-        private HsmNodeDrawModel _drawModel = null;
+        private HsmNodeAreaDrawModel _drawModel = null;
         private HsmNodeDraw _hsmNodeDraw = null;
         private NodeHandleStateMachine _nodeHandleStateMachine;
 
@@ -15,9 +14,8 @@ namespace HSMTree
         private Rect scrollRect = new Rect(0, 0, 1500, 1000);
         private Rect contentRect = new Rect(0, 0, 3000, 2000);
 
-        public void Init(HsmNodeDrawController drawController, HsmNodeDrawModel drawModel)
+        public void Init(HsmNodeAreaDrawModel drawModel)
         {
-            _drawController = drawController;
             _drawModel = drawModel;
             _hsmNodeDraw = new HsmNodeDraw();
             _nodeHandleStateMachine = new NodeHandleStateMachine();

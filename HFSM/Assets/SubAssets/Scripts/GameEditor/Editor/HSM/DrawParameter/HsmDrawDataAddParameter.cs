@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using GraphicTree;
-using UnityEngine;
+﻿using GraphicTree;
 using UnityEditor;
 using System.Text.RegularExpressions;
 

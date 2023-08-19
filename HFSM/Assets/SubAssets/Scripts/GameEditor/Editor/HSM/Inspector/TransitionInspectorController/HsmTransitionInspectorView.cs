@@ -7,12 +7,12 @@ namespace HSMTree
 {
     public class HsmTransitionInspectorView
     {
-        private HsmDrawNodeParameter hsmDrawNodeParameter;
+        private HsmDrawNodeTransitionParameter _hsmDrawNodeTransitionParameter;
         private HsmConfigNode _nodeData;
         private HsmConfigTransition _transition;
         public HsmTransitionInspectorView()
         {
-            hsmDrawNodeParameter = new HsmDrawNodeParameter();
+            _hsmDrawNodeTransitionParameter = new HsmDrawNodeTransitionParameter();
         }
 
         public void Draw(HsmConfigNode nodeData, HsmConfigTransition transition)
@@ -173,8 +173,8 @@ namespace HSMTree
             EditorGUILayout.BeginVertical("box");
             {
                 string parameterName = hSMParameter.parameterName;
-                hsmDrawNodeParameter.SetDelCallBack(DelParameter);
-                hsmDrawNodeParameter.Draw(hSMParameter);
+                _hsmDrawNodeTransitionParameter.SetDelCallBack(DelParameter);
+                _hsmDrawNodeTransitionParameter.Draw(hSMParameter);
                 if (parameterName.CompareTo(hSMParameter.parameterName) != 0)
                 {
                     ChangeParameter(hSMParameter.parameterName);

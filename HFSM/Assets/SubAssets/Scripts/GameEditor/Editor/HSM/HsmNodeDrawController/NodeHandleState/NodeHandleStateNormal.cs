@@ -72,7 +72,7 @@ namespace HSMTree
         private void MouseRightDownEmptyNode()
         {
             GenericMenu menu = new GenericMenu();
-            List<Node_Draw_Info> nodeList = HsmNodeDrawInfoController.GetInstance().InfoList;
+            List<Node_Draw_Info> nodeList = HsmNodeAreaMenuController.GetInstance().InfoList;
             for (int i = 0; i < nodeList.Count; ++i)
             {
                 Node_Draw_Info draw_Info = nodeList[i];

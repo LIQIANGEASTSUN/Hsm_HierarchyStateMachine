@@ -2,9 +2,9 @@
 
 namespace HSMTree
 {
-    public class HsmNodeDrawModel
+    public class HsmNodeAreaDrawModel
     {
-        public HsmNodeDrawModel()
+        public HsmNodeAreaDrawModel()
         {
         }
 

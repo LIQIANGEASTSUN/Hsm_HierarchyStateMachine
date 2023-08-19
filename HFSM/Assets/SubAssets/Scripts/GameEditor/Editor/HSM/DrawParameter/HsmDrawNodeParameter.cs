@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using GraphicTree;
 using UnityEditor;
@@ -8,7 +7,6 @@ namespace HSMTree
 {
     public class HsmDrawNodeParameter : HsmDrawParameterBase
     {
-
         public override void Draw(NodeParameter hSMParameter)
         {
             EditorGUILayout.BeginVertical();
@@ -31,7 +29,6 @@ namespace HSMTree
                 {
                     GUI.enabled = ParameterValueEnableHandle();
                     DrawParameterSelect(hSMParameter);
-                    DrawCompare(hSMParameter);
                     DrawParameterValue(hSMParameter);
                     GUI.enabled = true;
                 }

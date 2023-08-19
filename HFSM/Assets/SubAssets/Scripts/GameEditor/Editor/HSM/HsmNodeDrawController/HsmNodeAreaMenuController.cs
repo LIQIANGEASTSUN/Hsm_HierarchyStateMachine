@@ -1,7 +1,5 @@
 ﻿using GraphicTree;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace HSMTree
 {
@@ -63,21 +61,22 @@ namespace HSMTree
         }
     }
 
-    public class HsmNodeDrawInfoController
+    // 节点编辑窗口区域,右键菜单栏控制
+    public class HsmNodeAreaMenuController
     {
-        private static HsmNodeDrawInfoController Instance;
+        private static HsmNodeAreaMenuController Instance;
         private List<Node_Draw_Info> infoList = new List<Node_Draw_Info>();
 
-        public static HsmNodeDrawInfoController GetInstance()
+        public static HsmNodeAreaMenuController GetInstance()
         {
             if (null == Instance)
             {
-                Instance = new HsmNodeDrawInfoController();
+                Instance = new HsmNodeAreaMenuController();
             }
             return Instance;
         }
 
-        public HsmNodeDrawInfoController()
+        public HsmNodeAreaMenuController()
         {
             Init();
         }
